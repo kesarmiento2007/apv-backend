@@ -15,7 +15,7 @@ conectarDB();
 const dominiosPermitidos = [process.env.FRONTEND_URL];  // Es el dominio que se nos crea al ejecutar React. Se recomienda ocultar el dominio en una variable de entorno
 const corsOptions = {
     origin: function(origin, callback) {  // El parametro origin representa el dominio en el que estemos actualmente
-        if(dominiosPermitidos.indexOf(origin) !== -1) {  // Si se encuentra el dominio en los dominios que permitimos, permitimos el acceso a el
+        if(!origin || dominiosPermitidos.indexOf(origin) !== -1) {  // Si se encuentra el dominio en los dominios que permitimos, permitimos el acceso a el
             // El Origen del Request esta permitido
             callback(null, true);  // null es que no hay error, y true es que permite el acceso
         } else {
