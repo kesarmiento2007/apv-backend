@@ -24,7 +24,7 @@ const corsOptions = {
     }
 }
 
-app.use(cors(corsOptions));  // Registramos cors con app.use()
+app.use(cors({origin:'*'}));  // Registramos cors con app.use()
 
 app.use("/api/veterinarios", veterinarioRoutes);
 app.use("/api/pacientes", pacienteRoutes);
