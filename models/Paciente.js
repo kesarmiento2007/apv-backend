@@ -22,11 +22,11 @@ const pacienteSchema = mongoose.Schema({
         required: true
     },
     veterinario: {
-        type: mongoose.Schema.Types.ObjectId,  // Con mongoose.Schema.Types.ObjectId hacemos que se obtenga como tipo de valor el id de un registro
-        ref: "Veterinario"  // Con ref indicamos el modelo con el que lo queremos relacionar
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Veterinario"
     }
-}, {  // Objeto de configuracion al schema del modelo
-    timestamps: true  // timestamps:true nos sirve para crear las columnas de actualizado y creado, en donde se almacenara automaticamente las fechas de cuando se cree un registro y de la ultima vez que fue actualizado
+}, {
+    timestamps: true
 });
 
 const Paciente = mongoose.model("Paciente", pacienteSchema);

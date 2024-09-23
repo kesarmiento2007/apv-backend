@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import { 
+import { // Podemos importar linea a linea para hacerlo mas legible
     registrar, 
     perfil, 
     confirmar, 

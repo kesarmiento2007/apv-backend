@@ -2,9 +2,9 @@ import mongoose from "mongoose";
 
 const conectarDB = async () => {
     try {
-        const db = await mongoose.connect(process.env.MONGO_URL);  // Usamos el metodo connect() de mongoose para conectarnos a nuestra db de mongodb. Pegamos el codigo que nos deja Atlas para conectarnos en la parte de Drivers
+        const db = await mongoose.connect(process.env.MONGO_URL);
 
-        const url = `${db.connection.host}:${db.connection.port}`;  // Generamos una URL con el puerto en donde se esta conectando
+        const url = `${db.connection.host}:${db.connection.port}`;
         console.log(`MongoDB conectado en: ${url}`);
 
     } catch (error) {
