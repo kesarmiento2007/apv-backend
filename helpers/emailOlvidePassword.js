@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 
 const emailOlvidePassword = async (datos) => {
-    const transporter = nodemailer.createTransport({  // Configuramos el servidor de envio de mails
+    const transporter = nodemailer.createTransport({
         host: process.env.EMAIL_HOST,
         port: process.env.EMAIL_PORT,
         auth: {

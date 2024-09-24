@@ -16,7 +16,7 @@ router.route("/")
 
 router.route("/:id")
     .get(checkAuth, obtenerPaciente)
-    .put(checkAuth, actualizarPaciente)  // El metodo put() es para cuado se vayan a actualizar registros
-    .delete(checkAuth, eliminarPaciente)  // El metodo delete es para cuando se vayan a eliminar registros
+    .put(checkAuth, actualizarPaciente)
+    .delete(checkAuth, eliminarPaciente)
 
 export default router;
