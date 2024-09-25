@@ -80,7 +80,7 @@ const autenticar = async (req, res) => {
     // Revisar el password
     if( await usuario.comprobarPassword(password) ) {
         // Autenticar
-        res.json({  // Si todo esta bien creamos un jwt del id del usuario que quiere iniciar sesion
+        res.json({
             _id: usuario._id,
             nombre: usuario.nombre,
             email: usuario.email,
